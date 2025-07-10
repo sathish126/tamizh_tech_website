@@ -79,9 +79,9 @@ const Team = () => {
       expertise: ['Digital Strategy', 'Web Dev', 'UI/UX', 'E-Commerce', 'Automation'],
       image: 'src/image/team/sathish.jpg',
       contact: {
-        email: 'sathish@tamizhtech.com',
+        email: 'sathispandiyan126@gmail.com',
         linkedin: '#',
-        whatsapp: '918438686030'
+        whatsapp: '9629463964'
       }
     }
   ];

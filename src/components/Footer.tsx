@@ -52,7 +52,7 @@ const Footer = () => {
                   >
                     TamizhTech
                   </h3>
-                  <p className="text-gray-400 text-sm font-medium">Robotics Solutions</p>
+                  <p className="text-gray-400 text-sm font-medium">Robotics company</p>
                 </div>
               </div>
               

@@ -14,18 +14,16 @@ const Header = () => {
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <div className="bg-gradient-to-r from-indigo-600 to-cyan-500 p-2 rounded-lg">
-              <Bot className="h-8 w-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-slate-800" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-                TamizhTech
-              </h1>
-              <p className="text-sm text-slate-600 font-medium">Robotics Solutions</p>
-            </div>
-          </div>
+         {/* Logo */}
+<div className="flex items-center space-x-3">
+  <img
+    src="src/image/logo.png"
+    alt="TamizhTech Logo"
+    className="h-48 w-48 object-contain rounded-md"
+  />
+ 
+</div>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
