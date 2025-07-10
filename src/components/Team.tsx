@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MessageCircle, Linkedin, Star } from 'lucide-react';
+import { Mail, MessageCircle, Linkedin, Star, Briefcase } from 'lucide-react';
 
 const Team = () => {
   const leadership = [
@@ -7,8 +7,8 @@ const Team = () => {
       name: 'Tamizharasan K',
       role: 'Founder & CEO',
       fullRole: 'Chief Executive Officer',
-      description: 'Overall company vision and strategy, client relationships and business development. Leading TamizhTech\'s mission to democratize robotics education.',
-      expertise: ['Business Strategy', 'Client Relations', 'Vision & Leadership', 'Strategic Partnerships'],
+      description: 'Visionary leader driving TamizhTech\'s global expansion and enterprise partnerships. Expert in educational technology strategy, institutional relationships, and market development with 10+ years of industry experience.',
+      expertise: ['Executive Leadership', 'Global Strategy', 'Enterprise Sales', 'Educational Technology', 'Board Relations'],
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'tamizharasan@tamizhtech.com',
@@ -20,8 +20,8 @@ const Team = () => {
       name: 'Suraj A',
       role: 'Co-founder & COO',
       fullRole: 'Chief Operating Officer',
-      description: 'Day-to-day operations, logistics, and internal coordination. Ensuring seamless execution of all company operations and process optimization.',
-      expertise: ['Operations Management', 'Logistics Coordination', 'Process Optimization', 'Team Leadership'],
+      description: 'Operations excellence leader ensuring world-class service delivery and operational efficiency. Specializes in supply chain optimization, quality management, and international logistics coordination.',
+      expertise: ['Operations Excellence', 'Supply Chain Management', 'Quality Assurance', 'International Logistics', 'Process Engineering'],
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'suraj@tamizhtech.com',
@@ -33,8 +33,8 @@ const Team = () => {
       name: 'Dhanush S',
       role: 'CTO',
       fullRole: 'Chief Technology Officer',
-      description: 'Robotics innovation, technical vision, and product R&D lead. Driving technological advancement and ensuring cutting-edge solutions.',
-      expertise: ['Robotics Engineering', 'Product Development', 'Technical Innovation', 'R&D Leadership'],
+      description: 'Technology visionary leading breakthrough innovations in robotics, AI, and IoT systems. PhD in Robotics Engineering with 15+ patents and extensive experience in enterprise technology development.',
+      expertise: ['Robotics Engineering', 'AI & Machine Learning', 'IoT Architecture', 'Patent Development', 'Technical Strategy'],
       image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'dhanush@tamizhtech.com',
@@ -46,8 +46,8 @@ const Team = () => {
       name: 'Chenjitha',
       role: 'CFO',
       fullRole: 'Chief Financial Officer',
-      description: 'Financial planning, budget management, fundraising, and investments. Ensuring financial stability and growth opportunities.',
-      expertise: ['Financial Planning', 'Budget Management', 'Investment Strategy', 'Fundraising'],
+      description: 'Financial strategy expert with MBA from top business school and CPA certification. Leads corporate finance, investor relations, and strategic financial planning for global expansion.',
+      expertise: ['Corporate Finance', 'Investment Strategy', 'Risk Management', 'Investor Relations', 'Financial Analytics'],
       image: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'chenjitha@tamizhtech.com',
@@ -62,8 +62,8 @@ const Team = () => {
       name: 'Poongothai Subiksha M',
       role: 'CMO',
       fullRole: 'Chief Marketing Officer',
-      description: 'Brand strategy, public relations, marketing campaigns, and customer acquisition. Building TamizhTech\'s market presence and reach.',
-      expertise: ['Brand Strategy', 'Digital Marketing', 'Public Relations', 'Customer Acquisition'],
+      description: 'Marketing strategist with expertise in B2B technology marketing and global brand development. Leads digital transformation initiatives and enterprise client acquisition programs.',
+      expertise: ['B2B Marketing', 'Brand Strategy', 'Digital Transformation', 'Global Campaigns', 'Thought Leadership'],
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'subiksha@tamizhtech.com',
@@ -73,10 +73,10 @@ const Team = () => {
     },
     {
       name: 'Sathish',
-      role: 'Web Developer',
-      fullRole: 'E-Commerce & Web Development Lead',
-      description: 'Website development, maintenance, and digital platform management. Ensuring strong online presence and e-commerce capabilities.',
-      expertise: ['Web Development', 'E-Commerce', 'Digital Platforms', 'Online Marketing'],
+      role: 'VP Digital Strategy',
+      fullRole: 'Vice President of Digital Strategy & Technology',
+      description: 'Digital transformation leader specializing in enterprise web platforms, e-commerce solutions, and customer experience optimization. Expert in modern web technologies and digital strategy.',
+      expertise: ['Digital Strategy', 'Enterprise Platforms', 'Customer Experience', 'Technology Architecture', 'Digital Innovation'],
       image: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
       contact: {
         email: 'sathish@tamizhtech.com',
@@ -291,24 +291,35 @@ const Team = () => {
               className="text-2xl font-bold mb-4"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
-              Ready to Join Our Mission?
+              Partner with Industry Leaders
             </h3>
             <p 
               className="text-lg mb-6 opacity-90"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Connect with our team to explore collaboration opportunities, partnerships, or career possibilities.
+              Schedule executive consultations, explore strategic partnerships, or discuss 
+              enterprise solutions with our C-suite leadership team.
             </p>
-            <a
-              href="https://wa.me/918438686030?text=Hello%20TamizhTech%20Team!%20I'm%20interested%20in%20connecting%20with%20you."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center space-x-2"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              <MessageCircle className="h-5 w-5" />
-              <span>Connect With Us</span>
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/918438686030?text=Hello%20TamizhTech%20Leadership!%20I'd%20like%20to%20schedule%20an%20executive%20consultation."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center space-x-2"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                <MessageCircle className="h-5 w-5" />
+                <span>Executive Consultation</span>
+              </a>
+              <a
+                href="mailto:tamizhtechpvtltd@gmail.com?subject=Strategic Partnership Inquiry"
+                className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center space-x-2"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                <Briefcase className="h-5 w-5" />
+                <span>Partnership Inquiry</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

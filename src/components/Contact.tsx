@@ -22,19 +22,19 @@ const Contact = () => {
     e.preventDefault();
     
     const whatsappMessage = `
-Hello TamizhTech Team!
+Hello TamizhTech Executive Team!
 
-*New Inquiry Details:*
+*Enterprise Inquiry Details:*
 Name: ${formData.name}
 Email: ${formData.email}
 Phone: ${formData.phone}
 Subject: ${formData.subject}
 Inquiry Type: ${formData.inquiryType}
 
-*Message:*
+*Executive Message:*
 ${formData.message}
 
-Looking forward to your response!
+Looking forward to executive consultation and partnership opportunities.
     `.trim();
 
     const whatsappUrl = `https://wa.me/918438686030?text=${encodeURIComponent(whatsappMessage)}`;
@@ -80,23 +80,23 @@ Looking forward to your response!
 
   const services = [
     {
-      title: 'Product Inquiries',
-      description: 'Get detailed information about our robotics kits and educational products',
+      title: 'Enterprise Solutions',
+      description: 'Custom robotics platforms and institutional technology implementations',
       icon: '🤖'
     },
     {
-      title: 'Custom Projects',
-      description: 'Discuss custom robotics solutions tailored to your specific needs',
+      title: 'Strategic Partnerships',
+      description: 'Long-term institutional partnerships and collaborative development programs',
       icon: '⚙️'
     },
     {
-      title: 'Workshop Booking',
-      description: 'Schedule training sessions and educational workshops for your team',
+      title: 'Executive Training',
+      description: 'Professional development programs and certification courses for leadership teams',
       icon: '📚'
     },
     {
-      title: 'Technical Support',
-      description: 'Get expert help with product setup, troubleshooting, and guidance',
+      title: 'Consultation Services',
+      description: 'Strategic technology consulting and digital transformation advisory services',
       icon: '🔧'
     }
   ];
@@ -211,11 +211,11 @@ Looking forward to your response!
                     style={{ fontFamily: 'Inter, sans-serif' }}
                   >
                     <option value="general">General Inquiry</option>
-                    <option value="product">Product Information</option>
-                    <option value="custom">Custom Project</option>
-                    <option value="workshop">Workshop Booking</option>
+                    <option value="enterprise">Enterprise Solutions</option>
+                    <option value="partnership">Strategic Partnership</option>
+                    <option value="consultation">Executive Consultation</option>
+                    <option value="training">Professional Training</option>
                     <option value="support">Technical Support</option>
-                    <option value="partnership">Partnership</option>
                   </select>
                 </div>
               </div>
@@ -321,23 +321,23 @@ Looking forward to your response!
               
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'd%20like%20to%20get%20a%20quote%20for%20your%20products."
+                  href="https://wa.me/918438686030?text=Hello%20TamizhTech%20Executive%20Team!%20I'd%20like%20to%20schedule%20a%20consultation%20for%20enterprise%20solutions."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   <MessageCircle className="h-5 w-5" />
-                  <span>Chat on WhatsApp</span>
+                  <span>Executive WhatsApp</span>
                 </a>
                 
                 <a
-                  href="mailto:tamizhtechpvtltd@gmail.com"
+                  href="mailto:tamizhtechpvtltd@gmail.com?subject=Enterprise Consultation Request"
                   className="w-full bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   <Mail className="h-5 w-5" />
-                  <span>Send Email</span>
+                  <span>Executive Email</span>
                 </a>
                 
                 <a
@@ -346,7 +346,7 @@ Looking forward to your response!
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >
                   <Phone className="h-5 w-5" />
-                  <span>Call Now</span>
+                  <span>Executive Hotline</span>
                 </a>
               </div>
             </div>

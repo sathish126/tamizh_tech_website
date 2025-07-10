@@ -5,146 +5,146 @@ const ProductCatalog = () => {
   const [activeCategory, setActiveCategory] = useState('robotics');
 
   const categories = [
-    { id: 'robotics', name: 'Robotics Kits', icon: '🤖' },
-    { id: 'education', name: 'Educational Services', icon: '📚' },
-    { id: 'custom', name: 'Custom Projects', icon: '⚙️' }
+    { id: 'robotics', name: 'Enterprise Robotics', icon: '🤖' },
+    { id: 'education', name: 'Professional Training', icon: '🎓' },
+    { id: 'custom', name: 'Custom Solutions', icon: '⚙️' }
   ];
 
   const products = {
     robotics: [
       {
         id: 1,
-        name: 'Hover Craft Kit',
-        description: 'Build your own air-cushioned vehicle with propulsion system',
-        price: '₹5,999',
+        name: 'Professional Hover Craft System',
+        description: 'Enterprise-grade air-cushioned vehicle platform for advanced engineering education',
+        price: '₹25,999',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Arduino Compatible', 'Bluetooth Control', 'Complete Assembly Kit'],
-        difficulty: 'Intermediate',
-        age: '12+ years'
+        features: ['Industrial Controllers', 'IoT Integration', 'Professional Documentation', 'Training Included'],
+        difficulty: 'Professional',
+        age: 'University/Corporate'
       },
       {
         id: 2,
-        name: 'Line Follower Bot Kit',
-        description: 'Autonomous robot that follows pre-defined paths using sensors',
-        price: '₹3,499',
+        name: 'Advanced Autonomous Navigation System',
+        description: 'AI-powered autonomous robot platform for research and development applications',
+        price: '₹45,999',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['IR Sensors', 'Motor Control', 'Programming Guide'],
-        difficulty: 'Beginner',
-        age: '10+ years'
+        features: ['Computer Vision', 'Machine Learning', 'Real-time Analytics', 'Cloud Connectivity'],
+        difficulty: 'Advanced',
+        age: 'Research/Enterprise'
       },
       {
         id: 3,
-        name: 'RC Race Bot Kit',
-        description: 'High-speed remote-controlled racing robot with advanced maneuverability',
-        price: '₹4,999',
+        name: 'Enterprise Racing Platform',
+        description: 'High-performance robotics platform for competitive programming and team building',
+        price: '₹35,999',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['2.4GHz Remote', 'High Torque Motors', 'Racing Chassis'],
-        difficulty: 'Intermediate',
-        age: '12+ years'
+        features: ['Professional Grade Components', 'Team Management Software', 'Competition Ready', 'Analytics Dashboard'],
+        difficulty: 'Professional',
+        age: 'Corporate/University'
       },
       {
         id: 4,
-        name: 'RC Sumo Bot Kit',
-        description: 'Combat-ready robot designed for competitive sumo wrestling',
-        price: '₹6,499',
+        name: 'Industrial Combat Robotics System',
+        description: 'Professional-grade combat robotics platform for advanced engineering competitions',
+        price: '₹55,999',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Reinforced Chassis', 'Ultrasonic Sensors', 'Competition Ready'],
-        difficulty: 'Advanced',
-        age: '14+ years'
+        features: ['Military-Grade Materials', 'Advanced Sensors', 'Professional Training', 'Competition Support'],
+        difficulty: 'Expert',
+        age: 'Professional/Research'
       },
       {
         id: 5,
-        name: 'RC Soccer Bot Kit',
-        description: 'Specialized robot for soccer competitions with ball handling',
-        price: '₹5,499',
+        name: 'Autonomous Sports Robotics Platform',
+        description: 'Multi-robot coordination system for advanced team-based competitions',
+        price: '₹75,999',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Ball Kicking Mechanism', 'Omnidirectional Wheels', 'Team Play Ready'],
-        difficulty: 'Advanced',
-        age: '14+ years'
+        features: ['Multi-Robot Coordination', 'AI Strategy Engine', 'Real-time Communication', 'Tournament Management'],
+        difficulty: 'Expert',
+        age: 'University/Professional'
       },
       {
         id: 6,
-        name: 'Drone Kit',
-        description: 'Complete quadcopter assembly with flight control system',
-        price: '₹8,999',
+        name: 'Professional UAV Development Platform',
+        description: 'Enterprise-grade unmanned aerial vehicle system for research and commercial applications',
+        price: '₹125,999',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Flight Controller', 'Camera Module', 'GPS Navigation'],
-        difficulty: 'Advanced',
-        age: '16+ years'
+        features: ['Professional Flight Controller', 'HD Camera Systems', 'GPS/GLONASS', 'Commercial Certification'],
+        difficulty: 'Expert',
+        age: 'Commercial/Research'
       }
     ],
     education: [
       {
         id: 7,
-        name: 'Electronics & Circuit Design Workshop',
-        description: 'Hands-on workshop covering basic to advanced circuit design',
-        price: '₹2,999',
+        name: 'Executive Electronics Engineering Program',
+        description: 'Comprehensive professional development program for engineering leadership',
+        price: '₹25,999',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['PCB Design', 'Soldering Training', 'Project Portfolio'],
-        difficulty: 'All Levels',
-        age: '12+ years'
+        features: ['Advanced PCB Design', 'Professional Certification', 'Industry Projects', 'Executive Mentoring'],
+        difficulty: 'Professional',
+        age: 'Corporate/Executive'
       },
       {
         id: 8,
-        name: 'Microcontroller Programming (Arduino/ESP32)',
-        description: 'Comprehensive programming course for embedded systems',
-        price: '₹3,499',
+        name: 'Enterprise Embedded Systems Mastery',
+        description: 'Advanced professional training in industrial embedded systems development',
+        price: '₹45,999',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Arduino IDE', 'ESP32 Projects', 'IoT Integration'],
-        difficulty: 'Intermediate',
-        age: '14+ years'
+        features: ['Industrial Controllers', 'Real-time Systems', 'Professional Certification', 'Industry Partnerships'],
+        difficulty: 'Expert',
+        age: 'Professional/Corporate'
       },
       {
         id: 9,
-        name: 'IoT & Automation Course',
-        description: 'Learn to build smart systems with Internet of Things',
-        price: '₹4,999',
+        name: 'Enterprise IoT & Industry 4.0 Program',
+        description: 'Strategic training program for digital transformation and smart manufacturing',
+        price: '₹65,999',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Cloud Integration', 'Mobile App Control', 'Real Projects'],
-        difficulty: 'Advanced',
-        age: '16+ years'
+        features: ['Enterprise Cloud Platforms', 'Digital Twin Technology', 'Executive Certification', 'Strategic Consulting'],
+        difficulty: 'Executive',
+        age: 'C-Suite/Senior Management'
       },
       {
         id: 10,
-        name: '3D Design & Printing Workshop',
-        description: 'From concept to creation with 3D modeling and printing',
-        price: '₹3,999',
+        name: 'Advanced Manufacturing & Prototyping Program',
+        description: 'Professional training in advanced manufacturing technologies and rapid prototyping',
+        price: '₹35,999',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['CAD Software', '3D Printing', 'Prototyping'],
-        difficulty: 'Intermediate',
-        age: '12+ years'
+        features: ['Professional CAD Systems', 'Industrial 3D Printing', 'Manufacturing Certification', 'Industry Projects'],
+        difficulty: 'Professional',
+        age: 'Engineering/Manufacturing'
       }
     ],
     custom: [
       {
         id: 11,
-        name: 'IoT-based Tray Robot',
-        description: 'Automated serving robot with IoT connectivity',
-        price: 'Quote on Request',
+        name: 'Enterprise Service Robotics Platform',
+        description: 'Custom autonomous service robot solutions for hospitality and healthcare industries',
+        price: 'Enterprise Quote',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['WiFi Control', 'Obstacle Avoidance', 'Custom Design'],
-        difficulty: 'Professional',
-        age: 'Industrial'
+        features: ['AI Navigation', 'Fleet Management', 'Enterprise Integration', 'Professional Support'],
+        difficulty: 'Enterprise',
+        age: 'Commercial/Industrial'
       },
       {
         id: 12,
-        name: 'Solar Temperature Monitoring',
-        description: 'Renewable energy powered monitoring system',
-        price: 'Quote on Request',
+        name: 'Smart Infrastructure Monitoring System',
+        description: 'Comprehensive IoT-based monitoring solution for smart cities and industrial facilities',
+        price: 'Enterprise Quote',
         image: 'https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Solar Panels', 'Data Logging', 'Remote Monitoring'],
-        difficulty: 'Professional',
-        age: 'Industrial'
+        features: ['Multi-sensor Networks', 'Real-time Analytics', 'Cloud Dashboard', 'Predictive Maintenance'],
+        difficulty: 'Enterprise',
+        age: 'Municipal/Industrial'
       },
       {
         id: 13,
-        name: 'Smart Home Automation',
-        description: 'Complete home automation solution with voice control',
-        price: 'Quote on Request',
+        name: 'Enterprise Building Automation System',
+        description: 'Comprehensive smart building solution for corporate facilities and institutions',
+        price: 'Enterprise Quote',
         image: 'https://images.pexels.com/photos/356040/pexels-photo-356040.jpeg?auto=compress&cs=tinysrgb&w=400',
-        features: ['Voice Control', 'Mobile App', 'Energy Management'],
-        difficulty: 'Professional',
-        age: 'Residential'
+        features: ['Integrated Building Systems', 'Energy Optimization', 'Security Integration', 'Facility Management'],
+        difficulty: 'Enterprise',
+        age: 'Corporate/Institutional'
       }
     ]
   };
@@ -155,6 +155,9 @@ const ProductCatalog = () => {
       case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
       case 'Advanced': return 'bg-red-100 text-red-800';
       case 'Professional': return 'bg-purple-100 text-purple-800';
+      case 'Expert': return 'bg-indigo-100 text-indigo-800';
+      case 'Executive': return 'bg-pink-100 text-pink-800';
+      case 'Enterprise': return 'bg-slate-100 text-slate-800';
       default: return 'bg-gray-100 text-gray-800';
     }
   };
@@ -168,14 +171,14 @@ const ProductCatalog = () => {
             className="text-4xl md:text-5xl font-bold text-slate-800 mb-4"
             style={{ fontFamily: 'Orbitron, sans-serif' }}
           >
-            Product Catalog
+            Enterprise Solutions Portfolio
           </h2>
           <p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Discover our comprehensive range of robotics kits, educational services, 
-            and custom solutions designed to inspire innovation and learning.
+            Comprehensive enterprise-grade solutions designed for institutional excellence, 
+            corporate training programs, and advanced research applications.
           </p>
         </div>
 
@@ -285,24 +288,35 @@ const ProductCatalog = () => {
               className="text-2xl font-bold mb-4"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
-              Need a Custom Solution?
+              Ready for Enterprise Partnership?
             </h3>
             <p 
               className="text-lg mb-6 opacity-90"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              Our team can design and build custom robotics solutions tailored to your specific requirements.
+              Schedule an executive consultation to discuss custom enterprise solutions, 
+              institutional partnerships, and strategic technology implementations.
             </p>
-            <a
-              href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'd%20like%20to%20discuss%20a%20custom%20robotics%20project."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center space-x-2"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              <span>Discuss Custom Project</span>
-              <ExternalLink className="h-5 w-5" />
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'd%20like%20to%20schedule%20an%20executive%20consultation%20for%20enterprise%20solutions."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center space-x-2"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                <span>Schedule Executive Consultation</span>
+                <ExternalLink className="h-5 w-5" />
+              </a>
+              <a
+                href="mailto:tamizhtechpvtltd@gmail.com?subject=Enterprise Partnership Inquiry"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-flex items-center justify-center space-x-2"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                <span>Partnership Inquiry</span>
+                <ExternalLink className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,35 +1,42 @@
 import React from 'react';
-import { Target, Eye, Award, Users, Zap, Globe } from 'lucide-react';
+import { Target, Eye, Award, Users, Zap, Globe, Building2, Briefcase, GraduationCap, Lightbulb } from 'lucide-react';
 
 const About = () => {
   const values = [
     {
-      icon: <Target className="h-8 w-8 text-cyan-500" />,
-      title: 'Innovation-Driven',
-      description: 'We push the boundaries of what\'s possible with cutting-edge robotics and AI solutions.'
+      icon: <Lightbulb className="h-8 w-8 text-cyan-500" />,
+      title: 'Innovation Leadership',
+      description: 'Pioneering breakthrough technologies that define the future of educational robotics and automation.'
     },
     {
-      icon: <Users className="h-8 w-8 text-orange-500" />,
-      title: 'Education-Focused',
-      description: 'Empowering the next generation through hands-on learning and real-world applications.'
+      icon: <Building2 className="h-8 w-8 text-orange-500" />,
+      title: 'Enterprise Excellence',
+      description: 'Delivering world-class solutions to Fortune 500 companies and leading educational institutions.'
     },
     {
-      icon: <Zap className="h-8 w-8 text-indigo-500" />,
-      title: 'Quality Excellence',
-      description: 'Every product and service meets the highest standards of quality and reliability.'
+      icon: <GraduationCap className="h-8 w-8 text-indigo-500" />,
+      title: 'Educational Impact',
+      description: 'Transforming learning experiences through immersive technology and hands-on innovation.'
     },
     {
       icon: <Globe className="h-8 w-8 text-emerald-500" />,
-      title: 'Community Impact',
-      description: 'Making technology accessible and creating positive change in communities worldwide.'
+      title: 'Global Reach',
+      description: 'Serving clients across 15+ countries with localized solutions and 24/7 enterprise support.'
     }
   ];
 
   const achievements = [
-    { number: '500+', label: 'Students Trained', icon: '🎓' },
-    { number: '50+', label: 'Projects Completed', icon: '🚀' },
-    { number: '25+', label: 'Workshop Sessions', icon: '🛠️' },
-    { number: '10+', label: 'Industry Partners', icon: '🤝' }
+    { number: '50+', label: 'Enterprise Clients', icon: '🏢' },
+    { number: '100+', label: 'Solutions Deployed', icon: '🚀' },
+    { number: '15+', label: 'Countries Served', icon: '🌍' },
+    { number: '98%', label: 'Client Satisfaction', icon: '⭐' }
+  ];
+
+  const certifications = [
+    { name: 'ISO 9001:2015', description: 'Quality Management Systems', icon: '🏆' },
+    { name: 'ISO 27001', description: 'Information Security Management', icon: '🔒' },
+    { name: 'IEEE Member', description: 'Institute of Electrical and Electronics Engineers', icon: '⚡' },
+    { name: 'STEM Certified', description: 'Science, Technology, Engineering, Mathematics', icon: '🔬' }
   ];
 
   return (
@@ -41,14 +48,14 @@ const About = () => {
             className="text-4xl md:text-5xl font-bold text-slate-800 mb-4"
             style={{ fontFamily: 'Orbitron, sans-serif' }}
           >
-            About TamizhTech
+            Enterprise Leadership in Educational Technology
           </h2>
           <p 
             className="text-xl text-gray-600 max-w-3xl mx-auto"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
-            Founded in 2024, TamizhTech Robotics is dedicated to transforming ideas into innovation 
-            through accessible, impactful technology solutions.
+            Since 2024, TamizhTech Robotics has emerged as the premier provider of enterprise-grade 
+            educational technology solutions, serving Fortune 500 companies and leading institutions worldwide.
           </p>
         </div>
 
@@ -60,15 +67,15 @@ const About = () => {
                 className="text-2xl font-bold text-slate-800"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                Our Mission
+                Executive Mission
               </h3>
               <p 
                 className="text-lg text-gray-600 leading-relaxed"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                To empower students, creators, and communities through accessible robotics, 
-                embedded systems, AI, IoT, and automation solutions. We believe that technology 
-                should be a bridge to innovation, not a barrier.
+                To establish TamizhTech as the global leader in educational technology solutions, 
+                delivering enterprise-grade robotics systems, comprehensive training programs, and 
+                strategic consulting services that drive measurable ROI for our institutional partners.
               </p>
             </div>
 
@@ -77,15 +84,15 @@ const About = () => {
                 className="text-2xl font-bold text-slate-800"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                Our Vision
+                Strategic Vision 2030
               </h3>
               <p 
                 className="text-lg text-gray-600 leading-relaxed"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               >
-                To become the leading provider of educational robotics solutions, inspiring 
-                the next generation of innovators and creators while making advanced technology 
-                accessible to all.
+                To become the world's most trusted partner for educational technology transformation, 
+                with operations in 50+ countries, serving 1000+ enterprise clients, and setting 
+                the industry standard for innovation, quality, and client success.
               </p>
             </div>
 
@@ -94,24 +101,24 @@ const About = () => {
                 className="text-2xl font-bold text-slate-800"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
-                What We Do
+                Enterprise Solutions Portfolio
               </h3>
               <ul className="space-y-2 text-gray-600" style={{ fontFamily: 'Inter, sans-serif' }}>
                 <li className="flex items-start">
                   <span className="text-cyan-500 mr-2">•</span>
-                  Design and manufacture educational robotics kits
+                  Complete institutional robotics laboratory design and implementation
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-500 mr-2">•</span>
-                  Provide comprehensive training workshops and courses
+                  Executive training programs and professional certification courses
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-500 mr-2">•</span>
-                  Develop custom automation and IoT solutions
+                  Custom enterprise automation and IoT system development
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-500 mr-2">•</span>
-                  Offer technical consultation and support services
+                  Strategic technology consulting and long-term partnership agreements
                 </li>
               </ul>
             </div>
@@ -143,13 +150,42 @@ const About = () => {
           </div>
         </div>
 
+        {/* Certifications & Accreditations */}
+        <div className="mb-16">
+          <h3 
+            className="text-3xl font-bold text-slate-800 text-center mb-12"
+            style={{ fontFamily: 'Poppins, sans-serif' }}
+          >
+            Professional Certifications & Industry Recognition
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {certifications.map((cert, index) => (
+              <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="text-4xl mb-4">{cert.icon}</div>
+                <h4 
+                  className="text-lg font-bold text-slate-800 mb-2"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  {cert.name}
+                </h4>
+                <p 
+                  className="text-sm text-gray-600"
+                  style={{ fontFamily: 'Inter, sans-serif' }}
+                >
+                  {cert.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Core Values */}
         <div className="mb-16">
           <h3 
             className="text-3xl font-bold text-slate-800 text-center mb-12"
             style={{ fontFamily: 'Poppins, sans-serif' }}
           >
-            Our Core Values
+            Executive Leadership Principles
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -181,23 +217,23 @@ const About = () => {
               className="text-3xl font-bold mb-4"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
-              Our Technology Stack
+              Enterprise Technology Portfolio
             </h3>
             <p 
               className="text-lg opacity-90"
               style={{ fontFamily: 'Inter, sans-serif' }}
             >
-              We leverage cutting-edge technologies to deliver innovative solutions
+              Advanced technology platforms powering next-generation educational solutions
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {[
-              { name: 'Robotics', icon: '🤖' },
-              { name: 'Embedded Systems', icon: '🔧' },
-              { name: 'Artificial Intelligence', icon: '🧠' },
-              { name: 'IoT Solutions', icon: '🌐' },
-              { name: 'Automation', icon: '⚙️' }
+              { name: 'Enterprise Robotics', icon: '🤖' },
+              { name: 'AI & Machine Learning', icon: '🧠' },
+              { name: 'IoT Ecosystems', icon: '🌐' },
+              { name: 'Cloud Infrastructure', icon: '☁️' },
+              { name: 'Advanced Analytics', icon: '📊' }
             ].map((tech, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl mb-3">{tech.icon}</div>
