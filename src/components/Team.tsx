@@ -228,61 +228,6 @@ const Team = () => {
           </div>
         </div>
 
-        {/* Organization Chart */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h3 
-            className="text-2xl font-bold text-slate-800 text-center mb-8"
-            style={{ fontFamily: 'Poppins, sans-serif' }}
-          >
-            Organizational Structure
-          </h3>
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-8">
-              <div className="inline-block bg-gradient-to-r from-indigo-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold">
-                Founder & CEO
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-indigo-100 text-indigo-800 px-4 py-3 rounded-lg font-medium mb-4">
-                  Co-founder & COO
-                </div>
-                <div className="text-sm text-gray-600">Operations & Logistics</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-cyan-100 text-cyan-800 px-4 py-3 rounded-lg font-medium mb-4">
-                  CTO
-                </div>
-                <div className="text-sm text-gray-600">Technology & Innovation</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-purple-100 text-purple-800 px-4 py-3 rounded-lg font-medium mb-4">
-                  CFO
-                </div>
-                <div className="text-sm text-gray-600">Finance & Strategy</div>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-              <div className="text-center">
-                <div className="bg-orange-100 text-orange-800 px-4 py-3 rounded-lg font-medium mb-4">
-                  CMO
-                </div>
-                <div className="text-sm text-gray-600">Marketing & Brand</div>
-              </div>
-              
-              <div className="text-center">
-                <div className="bg-emerald-100 text-emerald-800 px-4 py-3 rounded-lg font-medium mb-4">
-                  Web Developer
-                </div>
-                <div className="text-sm text-gray-600">Digital Platforms</div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Call to Action */}
         <div className="text-center mt-16">
