@@ -80,7 +80,6 @@ const Team = () => {
       image: 'src/image/team/sathish.jpg',
       contact: {
         email: 'sathispandiyan126@gmail.com',
-        linkedin: 'https://www.linkedin.com/in/sathishkumarp126',
         whatsapp: '9629463964'
       }
     }
