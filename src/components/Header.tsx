@@ -17,7 +17,7 @@ const Header = () => {
          {/* Logo */}
 <div className="flex items-center space-x-3">
   <img
-    src="src/image/logo.png"
+    src="./src/image/logo.png"
     alt="TamizhTech Logo"
     className="h-40 w-auto object-contain"
   />

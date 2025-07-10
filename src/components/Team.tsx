@@ -9,7 +9,7 @@ const Team = () => {
       fullRole: 'Chief Executive Officer',
       description: 'Visionary leader driving TamizhTech\'s global expansion and enterprise partnerships.',
       expertise: ['Executive Leadership', 'Global Strategy', 'Enterprise Sales', 'EdTech', 'Board Relations'],
-      image: 'src/image/team/Tamizharasan K.jpg',
+      image: './src/image/team/Tamizharasan K.jpg',
       contact: {
         email: 'tamizharasan@tamizhtech.com',
         linkedin: '#',
@@ -48,7 +48,7 @@ const Team = () => {
       fullRole: 'Chief Financial Officer',
       description: 'Handles finance, budgeting, investments, and funding strategies.',
       expertise: ['Finance', 'Investments', 'Budgeting', 'Fundraising', 'Risk Management'],
-      image: 'src/image/team/Chenjitha.jpeg',
+      image: './src/image/team/Chenjitha.jpeg',
       contact: {
         email: 'chenjitha@tamizhtech.com',
         linkedin: '#',
@@ -64,7 +64,7 @@ const Team = () => {
       fullRole: 'Chief Marketing Officer',
       description: 'Leads branding, PR, and customer outreach.',
       expertise: ['Marketing', 'Brand Strategy', 'PR', 'Customer Reach', 'Digital Campaigns'],
-      image: 'src/image/team/Poongothai Subiksha M.jpg',
+      image: './src/image/team/Poongothai Subiksha M.jpg',
       contact: {
         email: 'subiksha@tamizhtech.com',
         linkedin: '#',
@@ -77,7 +77,7 @@ const Team = () => {
       fullRole: 'Web Developer & E-Commerce Lead',
       description: 'Heads development of enterprise platforms and e-commerce systems.',
       expertise: ['Digital Strategy', 'Web Dev', 'UI/UX', 'E-Commerce', 'Automation'],
-      image: 'src/image/team/sathish.jpg',
+      image: './src/image/team/sathish.jpg',
       contact: {
         email: 'sathispandiyan126@gmail.com',
         whatsapp: '9629463964'
