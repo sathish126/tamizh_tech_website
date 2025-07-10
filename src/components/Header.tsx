@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white shadow-lg sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
          {/* Logo */}
@@ -19,10 +19,11 @@ const Header = () => {
   <img
     src="src/image/logo.png"
     alt="TamizhTech Logo"
-    className="h-48 w-48 object-contain rounded-md"
+    className="h-40 w-auto object-contain"
   />
- 
+  
 </div>
+
 
 
           {/* Desktop Navigation */}
