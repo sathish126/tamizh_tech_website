@@ -19,59 +19,41 @@ const Header = () => {
   <img
     src="./src/image/logo.png"
     alt="TamizhTech Logo"
-    className="h-40 w-auto object-contain"
+    className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
+    style={{ cursor: 'pointer' }}
   />
-  
 </div>
 
 
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="text-slate-700 hover:text-indigo-600 font-medium transition-colors"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('products')}
-              className="text-slate-700 hover:text-indigo-600 font-medium transition-colors"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              Products
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-slate-700 hover:text-indigo-600 font-medium transition-colors"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('team')}
-              className="text-slate-700 hover:text-indigo-600 font-medium transition-colors"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              Team
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-slate-700 hover:text-indigo-600 font-medium transition-colors"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
-            >
-              Contact
-            </button>
+            {[
+              { label: 'Home', id: 'hero' },
+              { label: 'Products', id: 'products' },
+              { label: 'About', id: 'about' },
+              { label: 'Team', id: 'team' },
+              { label: 'Contact', id: 'contact' },
+            ].map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="relative text-slate-700 hover:text-indigo-600 font-medium transition-colors duration-300 px-2 py-1 focus:outline-none group"
+                style={{ fontFamily: 'Poppins, sans-serif' }}
+              >
+                {item.label}
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+              </button>
+            ))}
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
+              href="https://wa.me/91+918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-xl transform hover:scale-105 focus:outline-none"
               style={{ fontFamily: 'Poppins, sans-serif' }}
             >
               Get Quote
@@ -81,7 +63,8 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200 active:scale-95 focus:outline-none"
+            aria-label="Toggle menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -89,48 +72,30 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-gray-200">
+          <div className="md:hidden pb-4 border-t border-gray-200 animate-fade-in">
             <div className="flex flex-col space-y-4 pt-4">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('products')}
-                className="text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                Products
-              </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('team')}
-                className="text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                Team
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors"
-                style={{ fontFamily: 'Poppins, sans-serif' }}
-              >
-                Contact
-              </button>
+              {[
+                { label: 'Home', id: 'hero' },
+                { label: 'Products', id: 'products' },
+                { label: 'About', id: 'about' },
+                { label: 'Team', id: 'team' },
+                { label: 'Contact', id: 'contact' },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="relative text-slate-700 hover:text-indigo-600 font-medium text-left transition-colors duration-300 px-2 py-1 focus:outline-none group"
+                  style={{ fontFamily: 'Poppins, sans-serif' }}
+                >
+                  {item.label}
+                  <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-indigo-500 transition-all duration-300 group-hover:w-full"></span>
+                </button>
+              ))}
               <a
                 href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-xl transform hover:scale-105 focus:outline-none text-center"
                 style={{ fontFamily: 'Poppins, sans-serif' }}
               >
                 Get Quote

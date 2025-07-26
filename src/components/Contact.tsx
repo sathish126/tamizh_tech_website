@@ -55,8 +55,8 @@ Looking forward to executive consultation and partnership opportunities.
     {
       icon: <Phone className="h-6 w-6" />,
       title: 'Phone',
-      detail: '+91 84386 86030',
-      action: 'tel:+918438686030'
+      detail: '+91 8148045030',
+      action: 'tel:+918148045030'
     },
     {
       icon: <Mail className="h-6 w-6" />,
@@ -67,7 +67,7 @@ Looking forward to executive consultation and partnership opportunities.
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Location',
-      detail: 'Tamil Nadu, India',
+      detail: 'Coimbatore, Tamil Nadu, India',
       action: '#'
     },
     {
@@ -321,7 +321,7 @@ Looking forward to executive consultation and partnership opportunities.
               
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/918438686030?text=Hello%20TamizhTech%20Executive%20Team!%20I'd%20like%20to%20schedule%20a%20consultation%20for%20enterprise%20solutions."
+                  href="https://wa.me/91+918148045030?text=Hello%20TamizhTech%20Executive%20Team!%20I'd%20like%20to%20schedule%20a%20consultation%20for%20enterprise%20solutions."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
