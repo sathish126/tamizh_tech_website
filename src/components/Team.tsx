@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: 'Tamizharasan K',
     role: 'Founder & CEO',
-    image: './src/image/team/Tamizharasan K.jpg',
+    image: '/public/image/team/Tamizharasan K.jpg',
     email: 'tamizharasan@tamizhtech.com',
     whatsapp: '918438686030',
   },
@@ -26,21 +26,21 @@ const teamMembers = [
   {
     name: 'Chenjitha',
     role: 'CFO',
-    image: './src/image/team/Chenjitha.jpeg',
+    image: '/public/image/team/Chenjitha.jpeg',
     email: 'chenjitha@tamizhtech.com',
     whatsapp: '918438686030',
   },
   {
     name: 'Poongothai Subiksha M',
     role: 'CMO',
-    image: './src/image/team/Poongothai Subiksha M.jpg',
+    image: '/public/image/team/Poongothai Subiksha M.jpg',
     email: 'subiksha@tamizhtech.com',
     whatsapp: '918438686030',
   },
   {
     name: 'Sathish',
     role: 'Web Developer & E-Commerce Lead',
-    image: './src/image/team/sathish.jpg',
+    image: '/public/image/team/sathish.jpg',
     email: 'sathispandiyan126@gmail.com',
     whatsapp: '9629463964',
   },

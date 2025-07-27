@@ -16,7 +16,7 @@ const getCategory = (name: string) => {
 
 // Helper to generate image path from product name
 const getImagePath = (productName: string) => 
-  `src/image/productimages/${productName}.jpeg`;
+  `/public/image/productimages/${productName}.jpeg`;
 
 const rawProducts = [
   { name: 'HC-SR04 Ultrasonic Sensor, 20-4500 mm', price: 70 },
