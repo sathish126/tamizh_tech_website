@@ -50,7 +50,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://wa.me/91+918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
+              href="https://wa.me/918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
               target="_blank"
               rel="noopener noreferrer"
               className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-xl transform hover:scale-105 focus:outline-none"
@@ -92,7 +92,7 @@ const Header = () => {
                 </button>
               ))}
               <a
-                href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
+                href="https://wa.me/918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-md hover:shadow-xl transform hover:scale-105 focus:outline-none text-center"

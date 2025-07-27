@@ -37,7 +37,7 @@ ${formData.message}
 Looking forward to executive consultation and partnership opportunities.
     `.trim();
 
-    const whatsappUrl = `https://wa.me/918438686030?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/918148045030?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
     
     // Reset form
@@ -321,7 +321,7 @@ Looking forward to executive consultation and partnership opportunities.
               
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/91+918148045030?text=Hello%20TamizhTech%20Executive%20Team!%20I'd%20like%20to%20schedule%20a%20consultation%20for%20enterprise%20solutions."
+                  href="https://wa.me/918148045030?text=Hello%20TamizhTech%20Executive%20Team!%20I'd%20like%20to%20schedule%20a%20consultation%20for%20enterprise%20solutions."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
@@ -341,7 +341,7 @@ Looking forward to executive consultation and partnership opportunities.
                 </a>
                 
                 <a
-                  href="tel:+918438686030"
+                  href="tel:+918148045030"
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"
                   style={{ fontFamily: 'Poppins, sans-serif' }}
                 >

@@ -21,7 +21,7 @@ const Footer = () => {
 
   const supportLinks = [
     { name: 'Technical Support', href: '#contact' },
-    { name: 'WhatsApp Help', href: 'https://wa.me/918438686030' },
+    { name: 'WhatsApp Help', href: 'https://wa.me/918148045030' },
     { name: 'Email Support', href: 'mailto:tamizhtechpvtltd@gmail.com' },
     { name: 'Documentation', href: '#contact' }
   ];
@@ -190,7 +190,7 @@ const Footer = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
+                href="https://wa.me/918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20your%20robotics%20solutions."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center space-x-2"

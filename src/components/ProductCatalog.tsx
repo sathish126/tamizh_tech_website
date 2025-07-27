@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const whatsappNumber = '8148045030';
+const whatsappNumber = '918148045030';
 
 // Helper to extract category from product name
 const getCategory = (name: string) => {

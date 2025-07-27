@@ -66,7 +66,7 @@ Premium technology solutions provider specializing in institutional robotics lab
 {/* CTA Buttons */}
 <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-200">
 <a
-href="https://wa.me/918438686030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20enterprise%20solutions%20for%20my%20organization."
+href="https://wa.me/918148045030?text=Hello%20TamizhTech!%20I'm%20interested%20in%20enterprise%20solutions%20for%20my%20organization."
 target="_blank"
 rel="noopener noreferrer"
 className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center justify-center space-x-2 shadow-lg focus:outline-none"
