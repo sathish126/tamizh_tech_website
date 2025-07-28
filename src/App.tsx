@@ -19,6 +19,10 @@ function App() {
       <Contact />
       <Footer />
       <WhatsAppButton />
+      {/* Back to Top Button */}
+      {typeof window !== 'undefined' && <React.Suspense fallback={null}>
+        {React.createElement(require('./components/BackToTop').default)}
+      </React.Suspense>}
     </div>
   );
 }
