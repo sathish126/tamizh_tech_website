@@ -17,7 +17,7 @@ const Header = () => {
          {/* Logo */}
 <div className="flex items-center space-x-3">
   <img
-    src="/public/image/logo.png"
+    src="/image/logo.png"
     alt="TamizhTech Logo"
     className="h-16 sm:h-24 md:h-32 lg:h-40 w-auto object-contain transition-transform duration-300 hover:scale-105 hover:drop-shadow-lg"
     style={{ cursor: 'pointer' }}
