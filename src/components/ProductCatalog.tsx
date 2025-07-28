@@ -116,6 +116,25 @@ const categories = [
 
 const viewOptions = [15, 30, 45];
 
+class ErrorBoundary extends React.Component<{children: React.ReactNode}, {hasError: boolean, error: any}> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: any) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: any, info: any) {
+    // log error
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div style={{color: 'red', padding: 20}}>Catalog Error: {String(this.state.error)}</div>;
+    }
+    return this.props.children;
+  }
+}
+
 const ProductCatalog = () => {
   const [quantities, setQuantities] = useState<{ [key: number]: number }>({});
   const [search, setSearch] = useState('');
@@ -154,118 +173,120 @@ const ProductCatalog = () => {
   };
 
   return (
-    <section id="products" className="bg-gray-50 min-h-screen py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-slate-800" style={{ fontFamily: 'Orbitron, sans-serif' }}>
-          Product Catalog
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8">
-          {/* Sidebar for categories */}
-          <aside className="md:w-1/5 w-full mb-6 md:mb-0">
-            <div className="bg-white rounded-xl shadow-md p-4 sticky top-28">
-              <h3 className="text-lg font-semibold mb-4 text-slate-800">Categories</h3>
-              <ul className="space-y-2">
-                {categories.map(cat => (
-                  <li key={cat}>
-                    <button
-                      className={`w-full text-left px-3 py-2 rounded-lg transition-colors font-medium ${filter === cat ? 'bg-orange-500 text-white' : 'bg-gray-100 text-slate-700 hover:bg-orange-100'}`}
-                      onClick={() => handleCategoryClick(cat)}
-                    >
-                      {cat}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </aside>
-
-          {/* Main content: search, view options, products */}
-          <main className="flex-1">
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-              <input
-                type="text"
-                placeholder="Search products..."
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-              />
-              <div className="flex items-center gap-2">
-                <label htmlFor="viewCount" className="text-sm text-slate-700">View:</label>
-                <select
-                  id="viewCount"
-                  value={viewCount}
-                  onChange={handleViewCountChange}
-                  className="px-2 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-                >
-                  {viewOptions.map(opt => (
-                    <option key={opt} value={opt}>{opt}</option>
+    <ErrorBoundary>
+      <section id="products" className="bg-gray-50 min-h-screen py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-slate-800" style={{ fontFamily: 'Orbitron, sans-serif' }}>
+            Product Catalog
+          </h2>
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Sidebar for categories */}
+            <aside className="md:w-1/5 w-full mb-6 md:mb-0">
+              <div className="bg-white rounded-xl shadow-md p-4 sticky top-28">
+                <h3 className="text-lg font-semibold mb-4 text-slate-800">Categories</h3>
+                <ul className="space-y-2">
+                  {categories.map(cat => (
+                    <li key={cat}>
+                      <button
+                        className={`w-full text-left px-3 py-2 rounded-lg transition-colors font-medium ${filter === cat ? 'bg-orange-500 text-white' : 'bg-gray-100 text-slate-700 hover:bg-orange-100'}`}
+                        onClick={() => handleCategoryClick(cat)}
+                      >
+                        {cat}
+                      </button>
+                    </li>
                   ))}
-                </select>
-                <span className="text-sm text-slate-500">per page</span>
+                </ul>
               </div>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {paginatedProducts.map((product, idx) => (
-                <div key={idx} className="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-xl transition-shadow">
-                  <div>
-                    <div className="w-full h-32 flex items-center justify-center mb-4 bg-transparent rounded-lg overflow-hidden">
-                      {product.image ? (
-                        <img src={product.image} alt={product.name} className="object-contain h-full" />
-                      ) : (
-                        <span className="text-gray-400 text-5xl">📦</span>
-                      )}
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2 text-slate-900" style={{ fontFamily: 'Poppins, sans-serif' }}>{product.name}</h3>
-                    <p className="text-orange-600 font-bold text-xl mb-4">{product.price ? `₹${product.price}` : <span className="text-gray-500">Contact</span>}</p>
-                  </div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <label htmlFor={`qty-${idx}`} className="text-sm text-slate-700">Qty:</label>
-                    <input
-                      id={`qty-${idx}`}
-                      type="number"
-                      min={1}
-                      max={99}
-                      value={quantities[idx] || 1}
-                      onChange={e => handleQuantityChange(idx, Math.max(1, parseInt(e.target.value) || 1))}
-                      className="w-16 px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"
-                    />
-                  </div>
-                  <a
-                    href={getWhatsappLink(product, quantities[idx] || 1)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 mt-auto focus:outline-none"
-                    style={{ fontFamily: 'Poppins, sans-serif' }}
+            </aside>
+
+            {/* Main content: search, view options, products */}
+            <main className="flex-1">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                  className="w-full sm:w-1/2 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+                />
+                <div className="flex items-center gap-2">
+                  <label htmlFor="viewCount" className="text-sm text-slate-700">View:</label>
+                  <select
+                    id="viewCount"
+                    value={viewCount}
+                    onChange={handleViewCountChange}
+                    className="px-2 py-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
                   >
-                    Order via WhatsApp
-                  </a>
+                    {viewOptions.map(opt => (
+                      <option key={opt} value={opt}>{opt}</option>
+                    ))}
+                  </select>
+                  <span className="text-sm text-slate-500">per page</span>
                 </div>
-              ))}
-            </div>
-            {/* Pagination Controls */}
-            {totalPages > 1 && (
-              <div className="flex justify-center items-center gap-2 mt-8">
-                <button
-                  onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
-                  disabled={currentPage === 1}
-                  className="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-slate-700 font-semibold disabled:opacity-50"
-                >
-                  Previous
-                </button>
-                <span className="text-slate-700 font-medium">Page {currentPage} of {totalPages}</span>
-                <button
-                  onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
-                  disabled={currentPage === totalPages}
-                  className="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-slate-700 font-semibold disabled:opacity-50"
-                >
-                  Next
-                </button>
               </div>
-            )}
-          </main>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {paginatedProducts.map((product, idx) => (
+                  <div key={idx} className="bg-white rounded-xl shadow-md p-6 flex flex-col justify-between hover:shadow-xl transition-shadow">
+                    <div>
+                      <div className="w-full h-32 flex items-center justify-center mb-4 bg-transparent rounded-lg overflow-hidden">
+                        {product.image ? (
+                          <img src={product.image} alt={product.name} className="object-contain h-full" />
+                        ) : (
+                          <span className="text-gray-400 text-5xl">📦</span>
+                        )}
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2 text-slate-900" style={{ fontFamily: 'Poppins, sans-serif' }}>{product.name}</h3>
+                      <p className="text-orange-600 font-bold text-xl mb-4">{product.price ? `₹${product.price}` : <span className="text-gray-500">Contact</span>}</p>
+                    </div>
+                    <div className="flex items-center gap-2 mb-4">
+                      <label htmlFor={`qty-${idx}`} className="text-sm text-slate-700">Qty:</label>
+                      <input
+                        id={`qty-${idx}`}
+                        type="number"
+                        min={1}
+                        max={99}
+                        value={quantities[idx] || 1}
+                        onChange={e => handleQuantityChange(idx, Math.max(1, parseInt(e.target.value) || 1))}
+                        className="w-16 px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400"
+                      />
+                    </div>
+                    <a
+                      href={getWhatsappLink(product, quantities[idx] || 1)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition-all flex items-center justify-center gap-2 mt-auto focus:outline-none"
+                      style={{ fontFamily: 'Poppins, sans-serif' }}
+                    >
+                      Order via WhatsApp
+                    </a>
+                  </div>
+                ))}
+              </div>
+              {/* Pagination Controls */}
+              {totalPages > 1 && (
+                <div className="flex justify-center items-center gap-2 mt-8">
+                  <button
+                    onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-slate-700 font-semibold disabled:opacity-50"
+                  >
+                    Previous
+                  </button>
+                  <span className="text-slate-700 font-medium">Page {currentPage} of {totalPages}</span>
+                  <button
+                    onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="px-3 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-slate-700 font-semibold disabled:opacity-50"
+                  >
+                    Next
+                  </button>
+                </div>
+              )}
+            </main>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </ErrorBoundary>
   );
 };
 

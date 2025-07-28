@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 
 const WhatsAppButton = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed top-1/2 right-6 z-50 transform -translate-y-1/2">
       <a
         href="https://wa.me/918148045030?text=Hello%20TamizhTech!%20I'd%20like%20to%20know%20more%20about%20your%20robotics%20solutions."
         target="_blank"

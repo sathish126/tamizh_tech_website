@@ -7,6 +7,7 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -20,9 +21,7 @@ function App() {
       <Footer />
       <WhatsAppButton />
       {/* Back to Top Button */}
-      {typeof window !== 'undefined' && <React.Suspense fallback={null}>
-        {React.createElement(require('./components/BackToTop').default)}
-      </React.Suspense>}
+      <BackToTop />
     </div>
   );
 }
