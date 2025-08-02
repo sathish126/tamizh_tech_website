@@ -6,20 +6,27 @@ import About from './components/About';
 import Team from './components/Team';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
 import BackToTop from './components/BackToTop';
+import OurPartners from './components/OurPartners';
+import NewArrivals from './components/NewArrivals';
+import Robokits from './components/Robokits';
+import Testimonial from './components/Testimonial.tsx'
 
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
       <Hero />
+      <NewArrivals />
+      <Robokits />
       <ProductCatalog />
       <About />
+      <OurPartners />
+      <Testimonial />
       <Team />
       <Contact />
       <Footer />
-      <WhatsAppButton />
+    
       {/* Back to Top Button */}
       <BackToTop />
     </div>
