@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ProductCatalog from './components/ProductCatalog';
 import About from './components/About';
 import Team from './components/Team';
 import Contact from './components/Contact';
@@ -19,7 +18,6 @@ function App() {
       <Hero />
       <NewArrivals />
       <Robokits />
-      <ProductCatalog />
       <About />
       <OurPartners />
       <Testimonial />
