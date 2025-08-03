@@ -9,10 +9,7 @@ const partners = [
     name: 'Fixus',
     logo: '/image/fixus.jpg',
   },
-  {
-    name: 'TeamMechanics',
-    logo: '',
-  },
+
 ];
 
 const OurPartners = () => {

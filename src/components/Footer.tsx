@@ -242,7 +242,7 @@ const Footer = () => {
                   label: 'Instagram',
                 },
                 {
-                  href: 'https://www.youtube.com/@tamizhtech',
+                  href: 'https://youtube.com/@covaiscientist?si=tM-t8J-uP5a8BcDc',
                   icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.112-2.112C19.692 3.5 12 3.5 12 3.5s-7.692 0-9.386.574A2.994 2.994 0 0 0 .502 6.186C0 7.88 0 12 0 12s0 4.12.502 5.814a2.994 2.994 0 0 0 2.112 2.112C4.308 20.5 12 20.5 12 20.5s7.692 0 9.386-.574a2.994 2.994 0 0 0 2.112-2.112C24 16.12 24 12 24 12s0-4.12-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
                   color: 'hover:text-red-600',
                   label: 'YouTube',
